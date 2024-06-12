@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.close {
+    border-radius: 50%;
+    padding: 6px;
+    font-size: 1.1rem;
+    background-color: red;
+    margin-left: 3px;
+}
+
+.info {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 5.5%;
+    left: 76%;
+    padding: 6px;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    width: 350px;
+    user-select: none;
+}
+
+.dragPiece {
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    margin: 2px;
+    border-radius: 50%;
+    background-size: contain;
+    /* Ensures the background image is contained within the dimensions */
+    background-repeat: no-repeat;
+    /* Prevents the background image from repeating */
+    background-position: center;
+    /* Centers the background image */
+}
+
+.main {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(205, 240, 231);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main>h1 {
+    position: absolute;
+    top: 2%;
+    color: #000000;
+    font-size: 2rem;
+    width: 400px;
+    text-align: center;
+    border-radius: 40px;
+    border: 4px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+        linear-gradient(to right, darkblue, darkorchid, red, yellow, orange, green, pink, violet, beige, purple) border-box;
+}
+
+i {
+    color: #000000;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.panel {
+    height: 85%;
+    width: 95%;
+    position: absolute;
+    top: 12%;
+    background-color: rgb(244, 255, 246);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.panelTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(143, 180, 180);
+    height: 65px;
+    font-size: 1.5rem;
+}
+
+.elem {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.box {
+    height: 40px;
+    width: 40px;
+    background-color: rgb(4, 73, 85);
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: aquamarine;
+}
+
+.panelBottom {
+    width: 97%;
+    height: 85%;
+    background-color: bisque;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* Ensure the default direction is column */
+    margin: 7px auto;
+    border-radius: 20px;
+}
+
+
+.dragPane {
+    width: 48%;
+    height: 94%;
+    background-color: rgba(147, 129, 165, 0.356);
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 5px 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.dropPane {
+    width: 48%;
+    height: 94%;
+    background-color: rgba(147, 129, 165, 0.356);
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.drop {
+    width: 15%;
+    height: 99%;
+    background-color: rgb(212, 214, 214);
+    border-radius: 20px;
+    overflow-y: auto;
+}
+
+.dropHere {
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropHere .dragPiece {
+    width: 25px;
+    height: 25px;
+}
+
+.label {
+    width: 100%;
+    height: 11%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: rgb(178, 192, 209);
+}
+
+.coin .label {
+    background-size: contain;
+    /* Ensures the background image is contained within the dimensions */
+    background-repeat: no-repeat;
+    /* Prevents the background image from repeating */
+    background-position: center;
+    /* Centers the background image */
+}
+
+.crown .label {
+    background-size: contain;
+    /* Ensures the background image is contained within the dimensions */
+    background-repeat: no-repeat;
+    /* Prevents the background image from repeating */
+    background-position: center;
+    /* Centers the background image */
+}
+
+.diamond .label {
+    background-size: contain;
+    /* Ensures the background image is contained within the dimensions */
+    background-repeat: no-repeat;
+    /* Prevents the background image from repeating */
+    background-position: center;
+    /* Centers the background image */
+}
+
+.fire .label {
+    background-size: contain;
+    /* Ensures the background image is contained within the dimensions */
+    background-repeat: no-repeat;
+    /* Prevents the background image from repeating */
+    background-position: center;
+    /* Centers the background image */
+}
+
+.heart .label {
+    background-size: contain;
+    /* Ensures the background image is contained within the dimensions */
+    background-repeat: no-repeat;
+    /* Prevents the background image from repeating */
+    background-position: center;
+    /* Centers the background image */
+}
+
+.key .label {
+    background-size: contain;
+    /* Ensures the background image is contained within the dimensions */
+    background-repeat: no-repeat;
+    /* Prevents the background image from repeating */
+    background-position: center;
+    /* Centers the background image */
+}
+
+.startButton {
+    width: 30%;
+    height: 11%;
+    border-radius: 20px;
+    background-color: rgb(4, 73, 85);
+    color: aquamarine;
+    font-size: 2rem;
+    position: relative;
+    margin: auto;
+    border: none;
+}
+
+.description {
+    width: 75%;
+    height: 10%;
+    font-size: 2rem;
+    text-align: center;
+    margin: 90px 0px 10px 0px;
+}
+
+.gameOver {
+    width: 75%;
+    height: 10%;
+    font-size: 3.5rem;
+    text-align: center;
+    color: rgb(4, 73, 85);
+    position: absolute;
+    top: 20%;
+}
+
+.yourScore {
+    width: 75%;
+    height: 10%;
+    font-size: 2.5rem;
+    text-align: center;
+    color: rgb(0, 139, 46);
+    position: absolute;
+    top: 35%;
+}
+
+.playAgain {
+    width: 25%;
+    height: 10%;
+    font-size: 2rem;
+    text-align: center;
+    background-color: rgb(4, 73, 85);
+    color: aquamarine;
+    position: absolute;
+    top: 50%;
+    border: none;
+    border-radius: 40px;
+}
+
+.exitButton {
+    width: 15%;
+    height: 10%;
+    font-size: 2rem;
+    text-align: center;
+    background-color: rgb(4, 73, 85);
+    color: aquamarine;
+    position: absolute;
+    top: 65%;
+    border: none;
+    border-radius: 40px;
+}
